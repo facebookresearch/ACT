@@ -1,0 +1,10 @@
+{
+  "coal"       : 820,
+  "gas"        : 490,
+  "biomass"    : 230,
+  "solar"      : 41,
+  "geothermal" : 38,
+  "hydropower" : 24,
+  "nuclear"    : 12,
+  "wind"       : 11
+}
