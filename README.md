@@ -11,7 +11,7 @@ Central to ACT is an analytical, architectural carbon model to estimate operatio
 
 At the highest level the analytical carbon model combines operational and embodied carbon. As embodied carbon is generated at design and manufacturing time, we amortize emissions across the duration of a software application (T) over the lifetime of a hardware platform (LT).
 
-$$CF = OP_{CF} &plus; \frac{T}{LT} \times E_{CF}$$
+$$CF = OP_{CF} + \frac{T}{LT} \times E_{CF}$$
 
 The operational carbon owes to the product of the carbon intensity of energy consumed and the energy expenditure of running an application on hardware device.
 
@@ -19,23 +19,19 @@ $$OP_{CF} = CI_{use} \times Energy$$
 
 The embodied carbon owes to both packaging overhead and the embodied carbon of individual hardware components. For packaging overheads we multiply the number of integrated circuits (Nr) with a packaging footprint (Kr). The embodied carbon of all integrated circuits (e.g., application processors and SoC's, DRAM memory, SSD storage, HDD storage) are aggregated.
 
-$$E_{CF} = N_r K_r &plus; \sum_{r}^{SoC, DRAM, SSD, HDD} E_r$$
+$$E_{CF} = N_r K_r + \sum_{r}^{SoC, DRAM, SSD, HDD} E_r$$
 
 The embodied footprint of application processors and SoC's depends on the die area, carbon intensity of the energy consumed by the fab and energy consumed per unit area manufactured, the GHG footprint of gasses and chemicals per unit area manufactured, the footprint of procuruing raw materials per unit area, and fabrication yield.
 
 $$E_{SoC} = Area \times CPA$$
 
-
-$$E_{SoC} = Area \times \frac{CI_{fab} \times EPA &plus; GPA &plus; MPA}{Y}$$
+$$E_{SoC} = Area \times \frac{CI_{fab} \times EPA + GPA + MPA}{Y}$$
 
 Finally, the embodied carbon of the memory and storage devices depends on the carbon per storage intensity and the storage capacity of the modules.
 
-
 $$E_{DRAM} = CPS_{DRAM} \times Capacity_{DRAM}$$
 
-
 $$E_{HDD} = CPS_{HDD} \times Capacity_{HDD}$$
-
 
 $$E_{SSD} = CPS_{SSD} \times Capacity_{SSD}$$
 
