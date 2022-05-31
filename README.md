@@ -10,43 +10,30 @@ puter architects to consider sustainability as a first-order citizen, alongside 
 Central to ACT is an analytical, architectural carbon model to estimate operational and embodied carbon. We describe the model below and details can be found in our paper (see "Link to the Paper" below).
 
 At the highest level the analytical carbon model combines operational and embodied carbon. As embodied carbon is generated at design and manufacturing time, we amortize emissions across the duration of a software application (T) over the lifetime of a hardware platform (LT).
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?CF&space;=&space;OP_{CF}&space;&plus;&space;\frac{T}{LT}&space;\times&space;E_{CF}" >
-</p>
+
+$$CF = OP_{CF} + \frac{T}{LT} \times E_{CF}$$
 
 The operational carbon owes to the product of the carbon intensity of energy consumed and the energy expenditure of running an application on hardware device.
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?OP_{CF}&space;=&space;CI_{use}&space;\times&space;Energy">
-</p>
+
+$$OP_{CF} = CI_{use} \times Energy$$
 
 The embodied carbon owes to both packaging overhead and the embodied carbon of individual hardware components. For packaging overheads we multiply the number of integrated circuits (Nr) with a packaging footprint (Kr). The embodied carbon of all integrated circuits (e.g., application processors and SoC's, DRAM memory, SSD storage, HDD storage) are aggregated.
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{CF}&space;=&space;N_r&space;K_r&space;&plus;&space;\sum_{r}^{SoC,&space;DRAM,&space;SSD,&space;HDD}&space;E_r">
-</p>
+
+$$E_{CF} = N_r K_r + \sum_{r}^{SoC, DRAM, SSD, HDD} E_r$$
 
 The embodied footprint of application processors and SoC's depends on the die area, carbon intensity of the energy consumed by the fab and energy consumed per unit area manufactured, the GHG footprint of gasses and chemicals per unit area manufactured, the footprint of procuruing raw materials per unit area, and fabrication yield.
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{SoC}&space;=&space;Area&space;\times&space;CPA">
-</p>
 
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{SoC}&space;=&space;Area&space;\times&space;\frac{CI_{fab}&space;\times&space;EPA&space;&plus;&space;GPA&space;&plus;&space;MPA}{Y}">
-</p>
+$$E_{SoC} = Area \times CPA$$
+
+$$E_{SoC} = Area \times \frac{CI_{fab} \times EPA + GPA + MPA}{Y}$$
 
 Finally, the embodied carbon of the memory and storage devices depends on the carbon per storage intensity and the storage capacity of the modules.
 
+$$E_{DRAM} = CPS_{DRAM} \times Capacity_{DRAM}$$
 
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{DRAM}&space;=&space;CPS_{DRAM}&space;\times&space;Capacity_{DRAM}">
-</p>
+$$E_{HDD} = CPS_{HDD} \times Capacity_{HDD}$$
 
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{HDD}&space;=&space;CPS_{HDD}&space;\times&space;Capacity_{HDD}">
-</p>
-
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?E_{SSD}&space;=&space;CPS_{SSD}&space;\times&space;Capacity_{SSD}">
-</p>
+$$E_{SSD} = CPS_{SSD} \times Capacity_{SSD}$$
 
 # Carbon Optimization Metrics
 In addition to the architectural carbon model, it is crucial to have use-case dependent carbon optimization metrics to quantitatively explore sustainable system design spaces. ACT proposes four sustainability-driven optimization metrics to aid early design space exploration. Here _C_ stands for embodied carbon, _D_ for delay, and _E_ for energy.
