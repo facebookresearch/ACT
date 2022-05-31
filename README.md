@@ -40,10 +40,10 @@ In addition to the architectural carbon model, it is crucial to have use-case de
 
 | Metric        | Description   | Use case |
 | :-------------: |:-------------:| :-----:|
-| CDP      | Carbon-delay-product | Balance carbon and performance (e.g., sustainable data center) |
-| CEP      | Carbon-energy-product | Balance carbon and energy (e.g., sustainable mobile device) |
-| C^2EP      | Carbon square-energy-product | Sustainable device dominated by embodied carbon |
-| CE^2P      | Carbon-energy squared-product | Sustainable device dominated by operational carbon |
+| $$CDP$$      | Carbon-delay-product | Balance carbon and performance (e.g., sustainable data center) |
+| $$CEP$$      | Carbon-energy-product | Balance carbon and energy (e.g., sustainable mobile device) |
+| $$C^2EP$$      | Carbon square-energy-product | Sustainable device dominated by embodied carbon |
+| $$CE^2P$$      | Carbon-energy squared-product | Sustainable device dominated by operational carbon |
 
 
 # Getting Started
