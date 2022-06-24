@@ -71,17 +71,25 @@ To read the paper please visit this [link](https://github.com/fairinternal/ACT)
 If you use `ACT`, please cite us:
 
 ```
-   @conference{Gupta2022,
-   title = {ACT: Designing Sustainable Computer Systems With An Architectural Carbon Modeling Tool},
-   author = {Udit Gupta, Mariam Elgamal, Gage Hills, Gu-Yeon Wei, Hsien-Hsin S. Lee, David Brooks, Carole-Jean Wu},
-   url = {},
-   year = {2022},
-   date = {2022-06-01},
-   publisher = {The 49th IEEE/ACM International Symposium on Computer Architecture (ISCA 2022)},
-   keywords = {Computer Architecture, sustainable computing, mobile, energy, manufacturing},
-   pubstate = {published},
-   tppubtype = {conference}
-   }
+@inproceedings{GuptaACT2022,
+author = {Gupta, Udit and Elgamal, Mariam and Hills, Gage and Wei, Gu-Yeon and Lee, Hsien-Hsin S. and Brooks, David and Wu, Carole-Jean},
+title = {ACT: Designing Sustainable Computer Systems with an Architectural Carbon Modeling Tool},
+year = {2022},
+isbn = {9781450386104},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3470496.3527408},
+doi = {10.1145/3470496.3527408},
+abstract = {Given the performance and efficiency optimizations realized by the computer systems and architecture community over the last decades, the dominating source of computing's carbon footprint is shifting from operational emissions to embodied emissions. These embodied emissions owe to hardware manufacturing and infrastructure-related activities. Despite the rising embodied emissions, there is a distinct lack of architectural modeling tools to quantify and optimize the end-to-end carbon footprint of computing. This work proposes ACT, an architectural carbon footprint modeling framework, to enable carbon characterization and sustainability-driven early design space exploration. Using ACT we demonstrate optimizing hardware for carbon yields distinct solutions compared to optimizing for performance and efficiency. We construct use cases, based on the three tenets of sustainable design---Reduce, Reuse, Recycle---to highlight future methods that enable strong performance and efficiency scaling in an environmentally sustainable manner.},
+booktitle = {Proceedings of the 49th Annual International Symposium on Computer Architecture},
+pages = {784–799},
+numpages = {16},
+keywords = {energy, sustainable computing, computer architecture, mobile, manufacturing},
+location = {New York, New York},
+series = {ISCA '22}
+}
+
+
 ```
 
 # License
