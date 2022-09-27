@@ -64,7 +64,7 @@ The code is built on ```Python 3.7.7``` and no special packages are required.
 As examples we have provided two comparisons with ACT against life cycle analyses (LCA's). The first with Fairphone 3 and the second with the Dell R740 LCA's.
 
 # Link to the Paper
-To read the paper please visit this [link](https://github.com/fairinternal/ACT)
+To read the paper please visit this [link](https://dl.acm.org/doi/abs/10.1145/3470496.3527408)
 
 
 # Citation
