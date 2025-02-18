@@ -5,17 +5,19 @@
 # LICENSE file in the root directory of this source tree.
 
 import json
-import sys
+import sys, os
+from pathlib import Path
 
 class Fab_HDD():
     def __init__(self, config="BarraCuda"):
         ###############################
         # Carbon per capacity
         ###############################
-        with open("hdd/hdd_consumer.json", 'r') as f:
+        ACT_dir = Path(__file__).parent.absolute()
+        with open(os.path.join(ACT_dir,"hdd/hdd_consumer.json"), 'r') as f:
             hdd_config = json.load(f)
 
-        with open("hdd/hdd_enterprise.json", 'r') as f:
+        with open(os.path.join(ACT_dir,"hdd/hdd_enterprise.json"), 'r') as f:
             hdd_config.update(json.load(f))
 
         assert config in hdd_config.keys() and "HDD configuration not found"

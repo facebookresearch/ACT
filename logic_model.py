@@ -5,7 +5,8 @@
 # LICENSE file in the root directory of this source tree.
 
 import json
-import sys
+import sys, os
+from pathlib import Path
 
 class Fab_Logic():
     def __init__(self, process_node=14,
@@ -16,33 +17,36 @@ class Fab_Logic():
 
         self.debug = debug
 
+        ACT_dir = Path(__file__).parent.absolute()
+        # global_estimates_filepath = os.path.join(estimates_dir, "global_estimates.json")
+
         ###############################
         # Energy per unit area
         ###############################
-        with open("logic/epa.json", 'r') as f:
+        with open(os.path.join(ACT_dir, "logic/epa.json"), 'r') as f:
             epa_config = json.load(f)
 
         ###############################
         # Raw materials per unit area
         ###############################
-        with open("logic/materials.json", 'r') as f:
+        with open(os.path.join(ACT_dir,"logic/materials.json"), 'r') as f:
             materials_config = json.load(f)
 
         ###############################
         # Gasses per unit area
         ###############################
         if gpa == "95":
-            with open("logic/gpa_95.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"logic/gpa_95.json"), 'r') as f:
                 gpa_config = json.load(f)
 
         elif gpa == "99":
-            with open("logic/gpa_99.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"logic/gpa_99.json"), 'r') as f:
                 gpa_config = json.load(f)
 
         elif gpa == "97":
-            with open("logic/gpa_95.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"logic/gpa_95.json"), 'r') as f:
                 gpa_95_config = json.load(f)
-            with open("logic/gpa_99.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"logic/gpa_99.json"), 'r') as f:
                 gpa_99_config = json.load(f)
 
             gpa_config = {}
@@ -58,7 +62,7 @@ class Fab_Logic():
         # Carbon intensity of fab
         ###############################
         if "loc" in carbon_intensity:
-            with open("carbon_intensity/location.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"carbon_intensity/location.json"), 'r') as f:
                 loc_configs = json.load(f)
 
                 loc = carbon_intensity.replace("loc_", "")
@@ -68,7 +72,7 @@ class Fab_Logic():
                 fab_ci = loc_configs[loc]
 
         elif "src" in carbon_intensity:
-            with open("carbon_intensity/source.json", 'r') as f:
+            with open(os.path.join(ACT_dir,"carbon_intensity/source.json"), 'r') as f:
                 src_configs = json.load(f)
 
                 src = carbon_intensity.replace("src_", "")
