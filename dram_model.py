@@ -5,15 +5,17 @@
 # LICENSE file in the root directory of this source tree.
 
 import json
-import sys
+import sys, os
+from pathlib import Path
 
 class Fab_DRAM():
     def __init__(self,  config = "ddr4_10nm", fab_yield=0.875):
+        ACT_dir = Path(__file__).parent.absolute()
 
         ###############################
         # Carbon per capacity
         ###############################
-        with open("dram/dram_hynix.json", 'r') as f:
+        with open(os.path.join(ACT_dir,"dram/dram_hynix.json"), 'r') as f:
             dram_config = json.load(f)
 
         assert config in dram_config.keys() and "DRAM configuration not found"
