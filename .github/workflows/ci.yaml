@@ -1,0 +1,25 @@
+name: ACT v2 CI configuration
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, fedora-latest]
+        python-version: ['3.12.9']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install pyyaml pint
+      - name: Run CI script
+        run: |
+          ./ci_script.sh
