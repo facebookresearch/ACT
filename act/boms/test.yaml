@@ -1,0 +1,43 @@
+name: Test bill of material
+imports:
+  subsystem: imported.yaml
+passives:
+  cap0:
+    category: capacitor
+    type: mlcc
+    quantity: 2
+    weight: 0.03 mg
+silicon:
+  dut:
+    area: 10 mm2
+    fab_yield: 0.87
+    process: 14nm
+    n_ics: 1
+    fab_ci: taiwan
+  dram:
+    model: dram
+    capacity: 1 GB
+    fab_yield: 0.9
+    process: ddr4_10nm
+  ssd:
+    model: flash
+    capacity: 2 TB
+    fab_yield: 0.88
+    process: nand_10nm
+  hdd:
+    model: hdd
+    capacity: 1 TB
+    fab_yield: 0.92
+    process: BarraCuda
+materials:
+  fasteners:
+    category: enclosure
+    type: steel
+    weight: 0.6 g
+  pcb:
+    category: pcb
+    area: 10 cm2
+    layers: 4
+  battery:
+    category: battery
+    capacity: 5000 mWh

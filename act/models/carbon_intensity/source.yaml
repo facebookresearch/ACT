@@ -1,0 +1,9 @@
+# carbon intensity of energy production by energy source
+"coal"       : 820 g / kWh
+"gas"        : 490 g / kWh
+"biomass"    : 230 g / kWh
+"solar"      : 41 g / kWh
+"geothermal" : 38 g / kWh
+"hydropower" : 24 g / kWh
+"nuclear"    : 12 g / kWh
+"wind"       : 11 g / kWh

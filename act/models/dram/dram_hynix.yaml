@@ -1,0 +1,9 @@
+# DRAM embodied cost per unit storage - E_DRAM in Table 1
+"ddr3_50nm"   : 600 g / GB
+"ddr3_40nm"   : 315 g / GB
+"ddr3_30nm"   : 230 g / GB
+"lpddr3_30nm" : 201 g / GB
+"lpddr3_20nm" : 184 g / GB
+"lpddr2_20nm" : 159 g / GB
+"lpddr4"      : 48 g / GB
+"ddr4_10nm"   : 65 g / GB

@@ -1,0 +1,13 @@
+# PCB materials model
+# data for PCB emissions is not well-documented and sparse so this model is best effort based on the limited publicly available information
+# based on data from https://www.jstage.jst.go.jp/article/lca/13/3/13_256/_pdf/-char/en
+# to get an area estimate by layer, we take the weighted average of the GHG emissions / area for each PCB datapoint provided in Table 4
+# it should be noted that the 8-layer PCB is likely an outlier due to the limited number of samples in the paper
+2 : 0.41 kg / m2
+4 : 0.43 kg / m2
+6 : 0.71 kg / m2
+8 : 0.91 kg / m2
+
+# also provide the weighted average carbon per area per layer of the GHG-CO2-eq to interpolate the higher layers
+# assumes zero intercept linear model for now in lieu of a better model and more data
+cpla : 0.13 kg / m2

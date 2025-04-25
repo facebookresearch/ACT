@@ -1,0 +1,11 @@
+# based on https://eprints.whiterose.ac.uk/130419/1/LCA%20and%20EnvProfile%20Evaluations%20of%20Capacitors%20Manuscript%20-%20CLEAN.pdf
+# assumes emissions cost to manufacture 1 kg of 1 uF capacitors
+# the numbers here represent one carbon intensity profile
+# we expect that the manufacturing for passives does not change dramatically over time
+# model values are provided in units of MJ equivalent per kg of manufactured components
+
+# multilayer ceramic capacitor
+mlcc: 6862 MJ / kg
+
+# tantalum electrolytic capacitor
+tec: 5567 MJ / kg

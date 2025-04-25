@@ -1,0 +1,7 @@
+name: Materials Carbon Intensity Model
+materials:
+  # from https://worldsteel.org/climate-action/climate-change-and-the-production-of-iron-and-steel/
+  steel: 1.89 kg / kg
+
+  # from https://international-aluminium.org/landing/as-well-as-aluminium-recycling-saving-95-of-the-energy-needed-for-primary-aluminium-production-the-recycling-process-saves-a-similar-percentage-in-greenhouse-gas-emissions/
+  alumnimum: 15.1 kg / kg

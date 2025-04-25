@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 

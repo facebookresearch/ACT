@@ -1,0 +1,8 @@
+# pubicly available carbon per wafer from imec.netzero database
+"28nm" : 0.91 kg
+"20nm" : 0.91 kg
+"14nm" : 0.97 kg
+"10nm" : 1.09 kg
+"7nm"  : 1.44 kg
+"5nm"  : 1.54 kg
+"3nm"  : 1.75 kg
