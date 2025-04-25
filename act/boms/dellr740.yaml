@@ -1,0 +1,134 @@
+name: Dell Power Edge R740 Server Materials Model
+description: Materials model for Dell R740 from https://corporate.delltechnologies.com/content/dam/digitalassets/active/en/unauth/data-sheets/products/servers/lca_poweredge_r740.pdf ported from ACT
+silicon:
+  # system has 8 x 84 TB SSDs
+  ssd.main0:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main1:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main2:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main3:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main4:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main5:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main6:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.main7:
+    model: flash
+    process: nand_30nm
+    n_ics: 13
+    capacity: 3840 GB
+  ssd.secondary.ssd:
+    model: flash
+    process: nand_30nm
+    capacity: 400 GB
+    n_ics: 13
+    fab_yield: 0.875
+  ssd.secondary.dram:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 68 GB
+    fab_yield: 0.875
+
+  # system has 12 main DRAMs
+  dram.main0:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main1:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main2:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main3:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main4:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main5:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main6:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main7:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main8:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main9:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main10:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+  dram.main11:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 19
+    capacity: 36 GB
+
+  # 2 x CPU
+  cpu.main0:
+    area: 6.98 cm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  cpu.main1:
+    area: 6.98 cm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal

@@ -1,0 +1,12 @@
+# carbon intensity of energy production by location
+"world"     : 301 g / kWh
+"india"     : 725 g / kWh
+"australia" : 597 g / kWh
+"taiwan"    : 583 g / kWh
+"singapore" : 495 g / kWh
+"usa"       : 380 g / kWh
+"europe"    : 295 g / kWh
+"brazil"    : 82 g / kWh
+"iceland"   : 28 g / kWh
+"japan"     : 485 g / kWh
+"korea"     : 430 g / kWh

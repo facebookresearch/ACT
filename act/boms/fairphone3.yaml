@@ -1,0 +1,144 @@
+name: Fairphone Model
+description: Fairphone bill of materials model
+silicon:
+  # main architectural resources
+  cpu:
+    area: 46.4 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  dram:
+    model: dram
+    capacity: 4 GB
+    process: ddr3_50nm
+    fab_yield: 0.875
+    n_ics: 1
+  ssd:
+    model: flash
+    capacity: 64 GB
+    process: nand_30nm
+    fab_yield: 0.875
+    n_ics: 1
+
+  # IC areas
+  ics.ic_analog_switch0:
+    area: 0.85 mm2
+    process: 28nm
+    fab_ci: coal
+    gpa: 95
+    n_ics: 1
+  ics.led_flash0:
+    area: 1.2 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.led_flash1:
+    area: 1.2 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.cmos_image_sensor:
+    area: 35 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.light_sensor0:
+    area: 0.89 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.light_sensor1:
+    area: 0.08 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.led_full_color:
+    area: 0.25 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.image_sensor:
+    area: 18 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_wlan0:
+    area: 11.6 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_wlan1:
+    area: 1.44 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.audio_power_amplifier:
+    area: 12.96 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_analog_switch1:
+    area: 1.61 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_power_amplifier:
+    area: 6.3 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_pmu0:
+    area: 26.88 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_pmu1:
+    area: 0.77 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_pmu2:
+    area: 11.36 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.sensor:
+    area: 7 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.nfc_microcontroller:
+    area: 8.69 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_tranceiver:
+    area: 11 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1
+  ics.ic_audio_power:
+    area: 9.6 mm2
+    process: 28nm
+    gpa: 95
+    fab_ci: coal
+    n_ics: 1

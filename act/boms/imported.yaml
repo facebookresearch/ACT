@@ -1,0 +1,19 @@
+name: Test Imported BOM
+passives:
+  imported_cap:
+    category: capacitor
+    type: mlcc
+    quantity: 1
+    weight: 0.1 g
+silicon:
+  imported_si:
+    model: logic
+    area: 5 mm2
+    n_ics: 2
+    fab_ci: taiwan
+    process: 14nm
+materials:
+  imported_mat:
+    category: enclosure
+    type: steel
+    weight: 1 g

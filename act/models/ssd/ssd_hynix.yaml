@@ -1,0 +1,6 @@
+# SSD carbon emissions per unit storage - E_SSD in Table 1
+"nand_30nm": 31 g / GB
+"nand_20nm": 15 g / GB
+"nand_10nm": 10 g / GB
+"nand_tlc_1z": 5.6 g / GB
+"nand_tlc_v3": 6.3 g / GB
