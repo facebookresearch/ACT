@@ -7,7 +7,7 @@ jobs:
   build-and-test:
     strategy:
       matrix:
-        os: [ubuntu-latest, fedora-latest]
+        os: [ubuntu-latest]
         python-version: ['3.12.9']
     runs-on: ${{ matrix.os }}
     steps:
