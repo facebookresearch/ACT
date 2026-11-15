@@ -89,6 +89,14 @@ class ACTModelTests(BaseTestCase):
                 self.assertIsInstance(formatted_val, str)
                 self.assertIn("kilogram", formatted_val)
 
+    def test_results_record_operating_power(self):
+        """The results keep the operating power, not the operating year"""
+        act_model = ACTModel()
+        file = f"{self.test_dir}/../boms/tests/test.yaml"
+        bom = BOM(**load_yaml_with_macros(file), file=file)
+        act_model.get_carbon(bom=bom, op_power=250 * mW, op_year=2024)
+        self.assertEqual(act_model.results.op_power, 250 * mW)
+
     def test_act_serializability(self):
         """Enforce that the ACT data structure is serializable to ensure multiprocessing compatibility"""
         if "--no-dashboard" in self.test_args:
