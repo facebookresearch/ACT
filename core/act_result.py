@@ -31,6 +31,7 @@ class ACTResult:
         carbon_by_device (dict[str, Carbon]): Carbon emissions mapped by device name.
         timestamp (str): Timestamp when the analysis was run.
         cl_args (list): Command line arguments used for the analysis.
+        op_power (pint.Quantity): Operating power of the device.
         duty_cycle (float): Device utilization rate.
         life_cycle (pint.Quantity): Expected hardware life cycle.
         total_carbon (Carbon): Total carbon emissions across all devices.
@@ -43,6 +44,7 @@ class ACTResult:
     carbon_by_device: dict[str, Carbon] = field(default_factory=dict)
     timestamp: str = None
     cl_args: list = field(default_factory=list)
+    op_power: pint.Quantity = None
     duty_cycle: float = None
     life_cycle: pint.Quantity = None
     total_carbon: Carbon = None

@@ -185,11 +185,11 @@ class ACTModel:
         # record start of analysis for run time regression purposes
         self.start_time = datetime.datetime.now()
 
-        self.op_power = resolve_op_power(cl_op_power=op_power, bom=bom)
-        self.op_ci = resolve_op_ci(cl_op_ci=op_ci, bom=bom)
-        self.op_year = self.results.op_power = resolve_op_year(
-            cl_op_year=op_year, bom=bom
+        self.op_power = self.results.op_power = resolve_op_power(
+            cl_op_power=op_power, bom=bom
         )
+        self.op_ci = resolve_op_ci(cl_op_ci=op_ci, bom=bom)
+        self.op_year = resolve_op_year(cl_op_year=op_year, bom=bom)
         self.duty_cycle = self.results.duty_cycle = resolve_duty_cycle(
             cl_duty_cycle=duty_cycle, bom=bom
         )
