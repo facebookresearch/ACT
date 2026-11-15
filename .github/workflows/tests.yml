@@ -28,5 +28,7 @@ jobs:
         # Run outside the repo root and against the installed package: the
         # checkout contains act.py, which would shadow the installed `act`
         # package when cwd is on sys.path.
+        # Most test modules are named *_tests.py, which pytest does not collect
+        # by default, so list every naming pattern used in tests/.
         working-directory: ${{ runner.temp }}
-        run: python -m pytest --pyargs act.tests -v --tb=short
+        run: python -m pytest --pyargs act.tests -v --tb=short -o "python_files=test_*.py *_test.py *_tests.py"
